@@ -1,0 +1,43 @@
+{
+  "dockerImageBuilder": "cimg/openjdk:8.0",
+  "inputs": [
+    {
+      "label": "Hello there. Welcome to the world of Pokemon! My name is Oak.\nFirst, what is your name? ",
+      "name": "trainer_name",
+      "type": "text",
+      "tutorial": "C'amon, tell me your name."
+    },
+    {
+      "condition": {
+        "variable": "trainer_name",
+        "operator": "==",
+        "value": "Ash"
+      },
+      "items": [
+        "Pikachu"
+      ],
+      "label": "But wait, it's dangerous to go alone.\nChoose a Pokemon: ",
+      "name": "starter_pokemon",
+      "type": "text",
+      "tutorial": "Oh Ash, long time no see. Here, I have the perfect Pokemon for you!"
+    },
+    {
+      "condition": {
+        "variable": "trainer_name",
+        "operator": "!=",
+        "value": "Ash"
+      },
+      "items": [
+        "Charmander",
+        "Squirtle",
+        "Bulbasaur"
+      ],
+      "label": "But wait, it's dangerous to go alone.\nChoose a Pokemon: ",
+      "name": "starter_pokemon",
+      "type": "text",
+      "tutorial": "Choose a Pokemon to share your journey."
+    }
+  ]
+}
+
+
